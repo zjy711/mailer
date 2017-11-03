@@ -44,8 +44,6 @@ Rest-client: easy to use, and Mailgun uses it.
 
 2. I hard coded the recipient name to my personal email since the sandbox domain can only sent to verified recipient. 
 
-3. Since I only worked on it for ~ 10hours. For now the code doesn't analyze the Mailgun api response. Could be an enhancement in future, for example, notifying the caller about the situation and next steps.
-
 ## Might do different if there is more time:
 
 1. Build a way to store and show incoming api requests and update the status depends on mailgun's response. Mailgun provides very nice log feature. But for failures happens before the request calls Mailgun, having a place in web to view other than checking rails log would be nice. Especially when you are debugging in staging or production env. It also other team members to debug, QA, Product People, etc.
@@ -55,3 +53,5 @@ Rest-client: easy to use, and Mailgun uses it.
 3. Implement other Mailing Service.
 
 4. Store the mail service name like :mailgun in an environment variable instead of application config so switching service doesn't require a redeoply.
+
+5. For now the code doesn't analyze the Mailgun api response. Could be an enhancement in future, for example, notifying the caller about the situation and next steps.
