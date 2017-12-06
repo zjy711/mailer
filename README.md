@@ -31,18 +31,12 @@ Go to the app location and run `bundle exec rails console`
 
 ```RestClient.post 'http://localhost:3000/email.json', to: 'zjj711@gmail.com', to_name: :jiajunzhu, from: 'zjy711@gmail.com', from_name: "Ann's Bakery", subject: "Greetings from Ann's Bakery!", body: "Happy Holidays!"```
 
-(Note: The 'to' params is hardcoded to my personal email since the Mailgun sandbox domain restricts the recipients to verified ones.)
+( Note: Since I used the sandbox domain, it only sends email to verified recipient. For the purpose of testing, you can use mine: zjj711@gmail.com, to put in the 'to' params)
 
 # Tech notes:
 
 ## library picked:
 Rest-client: easy to use, and Mailgun uses it.
-
-## Trade-offs:
-
-1. I hardcoded some values(mailgun domain name, api_key) so that you don't need to provide your testing domain and api key to make it work. In real life the domain_name, api_key should be stored as envoirment variable, it'll be easier to set and change for different environment, most importantly, api_key should be a secret and never checked into codebase. 
-
-2. I hard coded the recipient name to my personal email since the sandbox domain can only sent to verified recipient. 
 
 ## Might do different if there is more time:
 

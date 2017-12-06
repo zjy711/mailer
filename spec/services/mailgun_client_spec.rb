@@ -18,7 +18,7 @@ RSpec.describe MailgunClient do
 
       rest_client_params = {
         from:    "#{params[:from_name]} <#{params[:from]}>",
-        to:      "#{params[:to_name]} <zjj711@gmail.com>",
+        to:      "#{params[:to_name]} <fake@example.com>",
         subject: params[:subject],
         text:    "this is a rspec testing email"
       }
